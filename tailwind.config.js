@@ -17,6 +17,9 @@ module.exports = {
         'light-grey': '#ECECEC',
         light: '#FAFAFA',
       },
+      zIndex: {
+        '-1': -1,
+      },
     },
   },
   plugins: [],
