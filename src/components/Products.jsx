@@ -1,38 +1,18 @@
 import React from 'react';
-import SecondaryBanner from './SecondaryBanner';
-import ButtonLink from './ButtonLink';
+import BadgeLink from './BadgeLink';
 import SectionTitle from './SectionTitle';
 import ProductCard from './ProductCard';
 import Loader from './Loader';
-import pexelsImg from './../img/pexels-empty-photo.jpg';
-const products = [
-  {
-    id: 1,
-    name: 'Hat',
-    band: 'Nike',
-    price: 9,
-  },
-  {
-    id: 2,
-    name: 'Tracksuit',
-    band: 'Puma',
-    price: 15,
-  },
-  {
-    id: 3,
-    name: 'Gloves',
-    band: 'Unbranded',
-    price: 5,
-  },
-];
+import useGetTopProducts from '../hooks/useGetTopProducts';
 
 const TopProducts = () => {
+  const products = useGetTopProducts();
   return (
-    <div className="md:mt-20">
+    <div className="mb-20 md:mt-20">
       <div className="container mx-auto -mb-10">
         <div className="flex items-center justify-between mb-6">
-          <SectionTitle text="Top Products" />
-          <ButtonLink
+          <SectionTitle text="Top products" />
+          <BadgeLink
             path="/about"
             text="see more"
             isMain
@@ -52,14 +32,13 @@ const TopProducts = () => {
                   name={product.name}
                   brand={product.brand}
                   price={product.price}
-                  imgURL={pexelsImg}
+                  imgURL={product.api_featured_image}
                 />
               ))}
             </>
           )}
         </div>
       </div>
-      <SecondaryBanner />
     </div>
   );
 };

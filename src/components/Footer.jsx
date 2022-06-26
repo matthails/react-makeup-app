@@ -1,10 +1,118 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import links from '../data/footerLinks.json';
+// import links from '../data/footerLinks.json';
 import BrandLink from './BrandLink';
 import FacebookIcon from './Icons/FacebookIcon';
 import TwitterIcon from './Icons/TwitterIcon';
 import InstagramIcon from './Icons/InstagramIcon';
+
+const links = [
+  {
+    title: 'about',
+    links: [
+      {
+        name: 'About Welly',
+        path: '/about',
+      },
+      {
+        name: 'Careers',
+        path: '/',
+      },
+      {
+        name: 'Social Media',
+        path: '/',
+      },
+      {
+        name: 'Affiliates',
+        path: '/',
+      },
+      {
+        name: 'Supply Chain',
+        path: '/',
+      },
+      {
+        name: 'Sitemap',
+        path: '/',
+      },
+      {
+        name: 'Global sites',
+        path: '/',
+      },
+    ],
+  },
+  {
+    title: 'skincare',
+    links: [
+      {
+        name: 'Makeup',
+        path: '/',
+      },
+      {
+        name: 'Skincare',
+        path: '/',
+      },
+      {
+        name: 'Fragrance',
+        path: '/',
+      },
+    ],
+  },
+  {
+    title: 'makeup',
+    links: [
+      {
+        name: 'Base',
+        path: '/',
+      },
+      {
+        name: 'Contour',
+        path: '/',
+      },
+      {
+        name: 'Eye makeup',
+        path: '/',
+      },
+      {
+        name: 'Lips',
+        path: '/',
+      },
+    ],
+  },
+  {
+    title: 'supplements',
+    links: [
+      {
+        name: 'Hair and nails',
+        path: '/',
+      },
+      {
+        name: 'Vitamins',
+        path: '/',
+      },
+      {
+        name: 'Nutrients',
+        path: '/',
+      },
+    ],
+  },
+  {
+    title: 'luxury',
+    links: [
+      {
+        name: 'Makeup',
+        path: '/',
+      },
+      {
+        name: 'Skincare',
+        path: '/',
+      },
+      {
+        name: 'Fragrance',
+        path: '/',
+      },
+    ],
+  },
+];
 
 const Footer = () => (
   <footer className="bg-dark text-light flex flex-col md:flex-row justify-between p-8">

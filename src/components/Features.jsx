@@ -1,6 +1,21 @@
 import React from 'react';
 
-const BenefitsItem = ({ item }) => (
+const features = [
+  {
+    title: 'Delivery',
+    text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora repellendus excepturi',
+  },
+  {
+    title: 'Products',
+    text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit',
+  },
+  {
+    title: 'Payments',
+    text: 'Lorum ipsum dolor sit, amet consectetur adipisicing elit. Tempora repellendus excepturi, consequatur sed inventore ut',
+  },
+];
+
+const FeaturesItem = ({ item }) => (
   <div className="flex flex-1">
     <div className="relative mr-4">
       <div className="absolute bg-yellow h-10 rounded-full top-0 w-10 -z-1"></div>
@@ -63,4 +78,12 @@ const BenefitsItem = ({ item }) => (
   </div>
 );
 
-export default BenefitsItem;
+const Features = () => (
+  <div className="container mx-auto flex flex-col md:flex-row mb-20 space-y-8 md:space-y-0 md:space-x-8 sm:w-3/4 md:w-full">
+    {features.map((item) => (
+      <FeaturesItem key={item.title} item={item} />
+    ))}
+  </div>
+);
+
+export default Features;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProductPrice from './ProductPrice';
 
 const ProductCard = ({ id, name, brand, price, imgURL }) => (
   <Link
@@ -15,7 +16,7 @@ const ProductCard = ({ id, name, brand, price, imgURL }) => (
 
       <p className="mb-4">{brand}</p>
 
-      <p>{price}</p>
+      <ProductPrice price={price} />
     </div>
   </Link>
 );

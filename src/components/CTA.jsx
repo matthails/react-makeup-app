@@ -1,8 +1,8 @@
 import React from 'react';
-import ButtonLink from './ButtonLink';
-import bannerImg from './../img/banner.png';
+import BadgeLink from './BadgeLink';
+import Img from './../img/image-color.png';
 
-const MainBanner = () => (
+const CTA = () => (
   <div className="container mx-auto flex flex-col-reverse md:flex-row items-center mt-0 md:mt-20 mb-10">
     <div>
       <h1 className="font-krona text-3xl md:text-5xl mb-4 md:mb-10">
@@ -17,15 +17,16 @@ const MainBanner = () => (
         trulia, twitter nuvvo. Omgpop tumblr odeo mog palantir squidoo balihoo
         nuvvo, etsy yuntaa elgg reddit kiko oovoo. Kno revver oovoo, blyve.
       </p>
-      <ButtonLink path="/about" text="see more" isMain />
+      <BadgeLink path="/about" text="see more" isMain />
     </div>
-    <div className="ml-0 md:ml-4 mb-4 md:mb-0 py-10 md:py-0 w-2/3 md:w-full">
+    <div className="ml-0 md:ml-4 mb-4 md:mb-0 py-10 md:py-0 w-2/3 md:w-full flex justify-center">
       <img
-        src={bannerImg}
+        width={300}
+        src={Img}
         alt="Tooth brush and a paste laying on top of a green leaf"
       />
     </div>
   </div>
 );
 
-export default MainBanner;
+export default CTA;

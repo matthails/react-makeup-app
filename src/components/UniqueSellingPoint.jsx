@@ -1,12 +1,13 @@
 import React from 'react';
-import uspImg from './../img/usp.jpg';
+import Img from './../img/image-color.png';
 
 const UniqueSellingPoint = () => (
   <div className="bg-light-grey pt-20 mb-20">
     <div className="container mx-auto pt-20 pb-16 flex flex-col md:flex-row items-center">
       <div className="mr-0 md:mr-4 mb-4 md:mb-0">
         <img
-          src={uspImg}
+          src={Img}
+          width={300}
           alt="Tooth brush and a paste laying on top of a green leaf"
         />
       </div>

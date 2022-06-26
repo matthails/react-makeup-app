@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ButtonLink = ({ path, text, isMain, className }) => (
+const BadgeLink = ({ path, text, isMain, className }) => (
   <Link
     to={path}
     className={`inline-block rounded-full font-bold font-krona text-xs ${
@@ -12,4 +12,4 @@ const ButtonLink = ({ path, text, isMain, className }) => (
   </Link>
 );
 
-export default ButtonLink;
+export default BadgeLink;
